@@ -1,92 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
     <title>motemen.github.com by motemen</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <a id="forkme_banner" href="https://github.com/motemen">View on GitHub</a>
-    <div class="shell">
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/motemen">View On GitHub</a></li>
+        </nav>
+      </div><!-- end header -->
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>motemen.github.com</h1>
-            <h2></h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <div class="wrapper">
 
-      <div id="no-downloads">
-        <span class="inner">
-        </span>
-      </div>
+      <section>
+        <div id="title">
+          <h1>motemen.github.com</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/motemen">motemen</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
 
+        <h3>Links</h3>
 
-      <span class="banner-fix"></span>
+<ul>
+<li><a href="https://github.com/motemen">GitHub</a></li>
+<li><a href="https://metacpan.org/author/MOTEMEN">CPAN</a></li>
+<li>
+<a href="http://subtech.g.hatena.ne.jp/motemen/">Weblog</a> (ja)</li>
+</ul><h3>Products</h3>
 
+<ul>
+<li>
+<a href="https://metacpan.org/module/htmlcat">htmlcat</a> Renders standard input in your browser
 
-      <section id="main_content">
-        <h3>Welcome to GitHub Pages.</h3>
+<ul>
+<li>Perl</li>
+<li>JavaScript</li>
+<li>Server-Sent Events</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/motemen/Teto">Teto</a> Web audio streaming server
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<ul>
+<li>Perl</li>
+<li>Plack/PSGI streaming</li>
+<li>AnyEvent, Coro</li>
+<li>DAAP</li>
+<li>ffmpeg</li>
+</ul>
+</li>
+<li>
+<a href="https://market.android.com/details?id=net.tokyoenvious.droid.pictumblr">PicTumblr</a> Android Tumblr app
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<ul>
+<li>Scala</li>
+<li>Android</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/motemen/Kindlenap">Kindlenap</a> Generates HTML files from a web page for <a href="http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000234621">kindlegen</a>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<ul>
+<li>Perl</li>
+<li>Supports AutoPagerize SITEINFO</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/motemen/modoi">modoi</a> Futaba channel (<a href="http://www.2chan.net/">http://www.2chan.net/</a>) proxy
 
-<h3>Designer Templates</h3>
+<ul>
+<li>Perl</li>
+<li>Pluggable components</li>
+<li>Hyper estraier-powered search</li>
+<li>Caches images</li>
+<li>Automatic refetching</li>
+</ul>
+</li>
+<li>
+<a href="http://misc.tokyoenvious.net/euler-getter/">euler-getter</a> A web implementation of <a href="http://www.sci.kagoshima-u.ac.jp/%7Eyasuda/Takehiko_Yasudas_homepage/Games.html">Euler Getter</a>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<ul>
+<li>Perl</li>
+<li>JavaScript/jQuery</li>
+</ul>
+</li>
+<li>
+<a href="https://gist.github.com/715431">JScriptHTTPGateway</a> Invoke Windows JScript via HTTP (e.g. curl)
 
-<h3>Rather Drive Stick?</h3>
+<ul>
+<li>C#</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/motemen/jusk">jusk</a> A study implementation of JavaScript by Haskell
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<ul>
+<li>Haskell</li>
+<li>Parsec</li>
+</ul>
+</li>
+</ul><h3>Presentations</h3>
 
-<h3>Authors and Contributors</h3>
+<ul>
+<li>
+<a href="http://www.slideshare.net/motemen/introduction-to-dbixlite-kyotopm-tech-talk-2">Introduction to DBIx::Lite</a> Kyoto.pm tech talk #2</li>
+<li>Teto - Streaming audio on Plack
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<ul>
+<li>
+<a href="https://docs.google.com/present/view?id=dmtb2db_296fqq7fbvj">YAPC::Asia 2011</a> (ja)</li>
+<li>
+<a href="https://docs.google.com/present/view?id=dmtb2db_266gwmhdgdn">Kansai.pm</a> (ja)</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/motemen/arrow-js/wiki/Shibuya.js-in-Kyoto">Arrow.js</a> (ja) Shibuya.js in Kyoto</li>
+</ul>
       </section>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>Projects by <a href="https://github.com/motemen">motemen</a> can be found on <a href="https://github.com/motemen">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
