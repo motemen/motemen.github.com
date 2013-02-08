@@ -1,0 +1,3 @@
+[submodule "jquery-partyhard"]
+	path = jquery-partyhard
+	url = git://github.com/motemen/jquery-partyhard.git
