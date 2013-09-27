@@ -115,6 +115,18 @@
   section#setup
     .page-header
       h1 Setting up
+    p First run (TODO: automatically run this first time)
+    pre.command-line
+      | git browse-remote --init
+    p This sets up the URL mapping for github.com remotes.
+    p If you have GitHub-like repository browser, ex. GitHub Enterprise, at gh.example.com, set up by:
+    pre.command-line
+      | git browse-remote --init <var>gh.example.com</var>=github
+    p Then you can open this non-github-com repository viewer.
+
+  section#template
+    .page-header
+      h1 Template values
     p TBD
 
   section#author
