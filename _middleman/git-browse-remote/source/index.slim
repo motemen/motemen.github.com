@@ -79,7 +79,7 @@
     .page-header
       h1 Usage
     pre
-      | git browse-remote [-r|--remote &lt;remote&gt;] [--top|--rev|--ref] [-l &lt;n&gt;] [&lt;commit-or-remote&gt;] [--] [&lt;file&gt;]
+      | git browse-remote [-r|--remote &lt;remote&gt;] [--top|--rev|--ref] [-l &lt;n&gt;] [&lt;commit-or-remote&gt;] [--] [&lt;file-or-directory&gt;]
 
     h2 Parameters
 
@@ -101,7 +101,7 @@
     h3 <var>COMMIT-or-REMOTE</var>
     p Specifies target commit (default: "HEAD"). Recognized as remote if equals to one of remotes.
 
-    h3 <var>FILE</var>
+    h3 <var>FILE-or-DIRECTORY</var>
     p Specifies a single file to view.
 
     h2 Determining which view to open
@@ -115,19 +115,46 @@
   section#setup
     .page-header
       h1 Setting up
-    p First run (TODO: automatically run this first time)
-    pre.command-line
-      | git browse-remote --init
-    p This sets up the URL mapping for github.com remotes.
     p If you have GitHub-like repository browser, ex. GitHub Enterprise, at gh.example.com, set up by:
     pre.command-line
       | git browse-remote --init <var>gh.example.com</var>=github
-    p Then you can open this non-github-com repository viewer.
+    p Then you can open this non-github-com repository viewer. The settings are wrote to <code>~/.gitconfig</code>.
+    p For GitHub repositories, this initialization is not required.
 
   section#template
     .page-header
       h1 Template values
-    p TBD
+    p If you want to write your own repository viewer's URL rules, these variables are available:
+
+    dl.dl-horizontal
+      dt <code>host</code>
+      dd Repository's host (e.g. "github.com")
+      dt <code>path</code>
+      dd Repository's path (e.g. "motemen/git-browse-remote") <br> <small><code>Array</code> methods are available (e.g. <code>path[-2,-1]</code>)</small>
+      dt <code>ref</code>
+      dd The ref name (e.g. "refs/heads/master")
+      dt <code>short_ref</code>
+      dd The ref name in short form (e.g. "master")
+      dt <code>commit</code>
+      dd The commit SHA-1 (e.g. "04f7c64ba9d524cf311a673ddce5722b2441e2ea")
+      dt <code>short_commit</code>
+      dd The commit SHA-1 in short form (e.g. "04f7c64b")
+      dt <code>rev</code>
+      dd <code>ref</code> or <code>commit</code>
+      dt <code>short_rev</code>
+      dd <code>short_ref</code> or <code>short_commit</code>
+      dt <code>file</code>
+      dd File (or directory) specified <br> <small><code>Pathname</code> methods are available</small>
+      dt <code>line</code>
+      dd Line specified by "-L"
+
+    p For example, URL mappings for github.com are below by default:
+    pre
+      | [browse-remote "github.com"]<br>
+      |   top = https://{host}/{path}<br>
+      |   ref = https://{host}/{path}/tree/{short_ref}<br>
+      |   rev = https://{host}/{path}/commit/{commit}<br>
+      |   file = "https://{host}/{path}/{file.directory? and :tree or :blob}/{short_rev}/{file}{line && \"#L%d\" % line}"
 
   section#author
     .page-header
